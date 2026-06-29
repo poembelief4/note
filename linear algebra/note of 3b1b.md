@@ -76,9 +76,9 @@ If you fix one scalar and let the other one change its value freely, the tip of 
 
 If you let both scalars range freely and consider every possible vector that you can get, there are three possible results. 
 
- 	1. For most pairs of vectors, you'll able to reach every possible point in the plane.
- 	2. But if your two original vectors happen to line up, the tip of the resulting vector is limited to just a single line passing through the origin.
- 	3. If both your vectors could be zero, you'd just be stuck at the origin.
+1. For most pairs of vectors, you'll able to reach every possible point in the plane.
+2. But if your two original vectors happen to line up, the tip of the resulting vector is limited to just a single line passing through the origin.
+3. If both your vectors could be zero, you'd just be stuck at the origin.
 
 ### span
 
@@ -87,3 +87,5 @@ the set of all possible vectors that you can reach with a linear combination of 
 the span of two vectors is basically a way of asking what are all the possible vectors you can reach using only these two fundamental operations.
 
 **Note: In general, if you're thinking about a vector on its own, think of it as an arrow. If you're dealing with a collection of vectors, it's convenient to think of them all as points.**
+
+The flat sheet is the span of two vectors which don't line up.
