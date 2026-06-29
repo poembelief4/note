@@ -61,3 +61,7 @@ one of the main things that numbers do is scale vectors, so it's common to use t
 sample: $2 \times (3,1)=(2\times 3,2\times 1)=(6,2)$ 
 
 # linear combinations, span, and bases
+
+## basis vector
+
+When you think about coordinates as scalars, the basis vectors are what those scalars scale.
