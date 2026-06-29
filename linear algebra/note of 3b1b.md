@@ -50,7 +50,7 @@ sample: $(1,2) + (3,-1)$ means first move $(1+3)$ to the right then move $(2-1)$
 
 **In general, vector addition in this "list of numbers" conception looks like matching up their terms and adding each one together.**
 
-### multiplication by a number
+### multiplication by a number( or scalar multiplication)
 
 **scaling**: the process of stretching or squishing or sometimes reversing the direction of a vector.
 
@@ -83,3 +83,7 @@ If you let both scalars range freely and consider every possible vector that you
 ### span
 
 the set of all possible vectors that you can reach with a linear combination of a given pair of vectors is called the **span** of those two vectors.
+
+the span of two vectors is basically a way of asking what are all the possible vectors you can reach using only these two fundamental operations.
+
+**Note: In general, if you're thinking about a vector**
