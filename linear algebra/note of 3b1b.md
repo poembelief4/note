@@ -86,4 +86,4 @@ the set of all possible vectors that you can reach with a linear combination of 
 
 the span of two vectors is basically a way of asking what are all the possible vectors you can reach using only these two fundamental operations.
 
-**Note: In general, if you're thinking about a vector**
+**Note: In general, if you're thinking about a vector on its own, think of it as an arrow. If you're dealing with a collection of vectors, it's convenient to think of them all as points.**
