@@ -52,7 +52,7 @@ sample: $(1,2) + (3,-1)$ means first move $(1+3)$ to the right then move $(2-1)$
 
 ### multiplication by a number
 
- **scaling**: the process of stretching or squishing or sometimes reversing the direction of a vector.
+**scaling**: the process of stretching or squishing or sometimes reversing the direction of a vector.
 
 **scalar**: a number scaling some vector.
 
@@ -65,3 +65,21 @@ sample: $2 \times (3,1)=(2\times 3,2\times 1)=(6,2)$
 ## basis vector
 
 When you think about coordinates as scalars, the basis vectors are what those scalars scale.
+
+Any time we describe vectors numerically, it depends on an implicit choice of what basis vectors we're using.
+
+## linear combination
+
+Any time that we're scaling two vectors and adding them, it's called a **linear combination** of those two vectors. 
+
+If you fix one scalar and let the other one change its value freely, the tip of the resulting vector draws a straight line.
+
+If you let both scalars range freely and consider every possible vector that you can get, there are three possible results. 
+
+ 	1. For most pairs of vectors, you'll able to reach every possible point in the plane.
+ 	2. But if your two original vectors happen to line up, the tip of the resulting vector is limited to just a single line passing through the origin.
+ 	3. If both your vectors could be zero, you'd just be stuck at the origin.
+
+### span
+
+the set of all possible vectors that you can reach with a linear combination of a given pair of vectors is called the **span** of those two vectors.
