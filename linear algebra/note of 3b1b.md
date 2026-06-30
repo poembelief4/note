@@ -176,3 +176,7 @@ $\begin{bmatrix} a\ b\\ c\ d \end{bmatrix}\begin{bmatrix} e\ f\\g\ h\end{bmatrix
 Change the order of two matrices, the result may be different. So, evidently **order** totally does matter.
 
 that means: $M_1 M_2\neq M_2M_1$
+
+But: $(M_1M_2)M_3=M_1(M_2M_3)$. Think about what this represents geometrically or look at this from right to left, then it's obviously.
+
+# linear transformations in three dimensions
