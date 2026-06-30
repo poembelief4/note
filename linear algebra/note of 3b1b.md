@@ -158,3 +158,13 @@ thus, $\begin{bmatrix} a\ b\\c\ d\end{bmatrix}\times\begin{bmatrix} x\\y\end{bma
 $\hat\imath$ remain fixed, but $\hat\jmath$ moves over to the coordinates $(k,1)$, so the matrix is $\begin{bmatrix} 1\ k\\0\ 1\end{bmatrix}$
 
 # Matrix multiplication as composition
+
+shear: $\begin{bmatrix} 1\ 1\\0\ 1\end{bmatrix}$
+
+rotation: $\begin{bmatrix} 0\ -1\\1\ 0\end{bmatrix}$
+
+composition: $\begin{bmatrix} 1\ -1\\1\ 0\end{bmatrix}$
+
+shear $\times$ (rotate $\times \begin{bmatrix} x\\y\end{bmatrix}$) = composition $\times \begin{bmatrix} x\\y \end{bmatrix} \rightarrow $ shear $\times$ rotation = composition
+
+this means: first, rotate. then, shear. We have to read from right to left.
