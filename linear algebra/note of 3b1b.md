@@ -74,7 +74,7 @@ Any time that we're scaling two vectors and adding them, it's called a **linear 
 
 If you fix one scalar and let the other one change its value freely, the tip of the resulting vector draws a straight line.
 
-If you let both scalars range freely and consider every possible vector that you can get, there are three possible results. 
+If you let both scalars range freely and consider every possible vector that you can get, there are three possible results:
 
 1. For most pairs of vectors, you'll able to reach every possible point in the plane.
 2. But if your two original vectors happen to line up, the tip of the resulting vector is limited to just a single line passing through the origin.
@@ -84,8 +84,48 @@ If you let both scalars range freely and consider every possible vector that you
 
 the set of all possible vectors that you can reach with a linear combination of a given pair of vectors is called the **span** of those two vectors.
 
-the span of two vectors is basically a way of asking what are all the possible vectors you can reach using only these two fundamental operations.
+the span of some vectors is basically a way of asking what are all the possible vectors you can reach using only these two fundamental operations.
 
 **Note: In general, if you're thinking about a vector on its own, think of it as an arrow. If you're dealing with a collection of vectors, it's convenient to think of them all as points.**
 
-The flat sheet is the span of two vectors which don't line up.
+The flat sheet is the span of two vectors which don't line up. The third vector can be seen as something moving around the span sheet of the first two, sweeping it through all of space.
+
+## basis
+
+A basis of a vector space is a set of **linearly independent** vectors that span the full space.
+
+### linearly independent
+
+When at least one of the vectors is redundant, not adding anything to our span, you have multiple vectors and you could remove one without reducing the span. Whenever this happens, the relevant terminology is to say that they are **linearly dependent**.
+
+One of the vectors can be expressed as a linear combination of the others, since it's already in the span of the others.
+
+Each vector really does add another dimension to the span, then they're said to be **linearly independent**
+
+# matrices as linear transformations
+
+## linear transformation
+
+keep grid lines parallel and evenly spaced $\longrightarrow$ vector v is **always a certain linear combination** of i-hat and j-hat $\longrightarrow$ we can deduce where vector v must go based only on where i-hat and j-hat each land.
+
+### transformation
+
+transformation $\rightarrow$ function, something that takes in inputs and spits out an output for each one.
+
+a vector $\longrightarrow$ another vector 
+
+**transformation** can visualize this input-output relation and suggests that you think using movement, which function can't.
+
+### linear
+
+A transformation is linear if it has two properties:
+
+1. **all lines** must remain lines, without getting curved.
+2. the origin must remain fixed in place.
+
+### how to describe numerically
+
+record where the two basis vectors - i-hat and j-hat - each land and everything else will follow from that.
+
+## matrices
+
