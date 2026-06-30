@@ -106,7 +106,9 @@ Each vector really does add another dimension to the span, then they're said to 
 
 ## linear transformation
 
-keep grid lines parallel and evenly spaced $\longrightarrow$ vector v is **always a certain linear combination** of i-hat and j-hat $\longrightarrow$ we can deduce where vector v must go based only on where i-hat and j-hat each land.
+keep grid lines parallel and evenly spaced $\longrightarrow$ vector v is **always a certain linear combination** of $\hat\imath$ and $\hat\jmath$$\longrightarrow$ we can deduce where vector v must go based only on where $\hat\imath$ and $\hat\jmath$ each land.
+
+If after transforming, the vectors are linearly dependent, then the transformation squishes all of 2-D space onto the line where those two vectors sit.
 
 ### transformation
 
@@ -125,7 +127,7 @@ A transformation is linear if it has two properties:
 
 ### how to describe numerically
 
-record where the two basis vectors - i-hat and j-hat - each land and everything else will follow from that.
+record where the two basis vectors - $\hat\imath$ and $\hat\jmath$ - each land and everything else will follow from that.
 
 example: 
 
@@ -141,3 +143,18 @@ $\vec v=-1\hat{\imath}+2\hat{\jmath}\rightarrow-1\begin{bmatrix} 1\\-2\end{bmatr
 
 ## matrices
 
+### matrix-vector multiplication
+
+$\begin{bmatrix} 3\ 2\\-2\ 1\end{bmatrix}$ can be seen like this: $\hat\imath\rightarrow\begin{bmatrix} 3\\-2\end{bmatrix},\ \hat\jmath\rightarrow\begin{bmatrix} 2\\1\end{bmatrix}$
+
+$\begin{bmatrix} 5\\7\end{bmatrix}$ can be seen as $5\hat\imath+7\hat\jmath$
+
+so, $\begin{bmatrix} 3\ 2\\-2\ 1\end{bmatrix}\times\begin{bmatrix} 5\\7\end{bmatrix}=5\begin{bmatrix} 3\\-2\end{bmatrix}+7\begin{bmatrix} 2\\1\end{bmatrix}=\begin{bmatrix} 3\times5+2\times7\\-2\times5+1\times7\end{bmatrix}=\begin{bmatrix} 29\\-3\end{bmatrix}$
+
+thus, $\begin{bmatrix} a\ b\\c\ d\end{bmatrix}\times\begin{bmatrix} x\\y\end{bmatrix}=x\begin{bmatrix} a\\c\end{bmatrix}+y\begin{bmatrix} b\\d\end{bmatrix}=\begin{bmatrix} ax+by\\cx+dy\end{bmatrix}$, and this operation is called **matrix-vector multiplication** 
+
+### shear
+
+$\hat\imath$ remain fixed, but $\hat\jmath$ moves over to the coordinates $(k,1)$, so the matrix is $\begin{bmatrix} 1\ k\\0\ 1\end{bmatrix}$
+
+# Matrix multiplication as composition
