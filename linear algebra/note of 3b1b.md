@@ -167,4 +167,10 @@ composition: $\begin{bmatrix} 1\ -1\\1\ 0\end{bmatrix}$
 
 shear $\times$ (rotate $\times \begin{bmatrix} x\\y\end{bmatrix}$) = composition $\times \begin{bmatrix} x\\y \end{bmatrix} \rightarrow $ shear $\times$ rotation = composition
 
-this means: first, rotate. then, shear. We have to read from right to left.
+this means: first, rotate. then, shear. We have to read **from right to left** just like read functions.
+
+think about the geometric representation of matrix multiplication, then you can get this:
+
+$\begin{bmatrix} a\ b\\ c\ d \end{bmatrix}\begin{bmatrix} e\ f\\g\ h\end{bmatrix}=\begin{bmatrix} ae+bg\ \ af+bh\\ce+dg\ \ cf+dh\end{bmatrix}$
+
+change the order of two matrices, the result may be different. 
