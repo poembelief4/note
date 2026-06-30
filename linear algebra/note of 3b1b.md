@@ -173,4 +173,6 @@ think about the geometric representation of matrix multiplication, then you can 
 
 $\begin{bmatrix} a\ b\\ c\ d \end{bmatrix}\begin{bmatrix} e\ f\\g\ h\end{bmatrix}=\begin{bmatrix} ae+bg\ \ af+bh\\ce+dg\ \ cf+dh\end{bmatrix}$
 
-change the order of two matrices, the result may be different. 
+Change the order of two matrices, the result may be different. So, evidently **order** totally does matter.
+
+that means: $M_1 M_2\neq M_2M_1$
