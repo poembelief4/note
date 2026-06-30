@@ -127,5 +127,17 @@ A transformation is linear if it has two properties:
 
 record where the two basis vectors - i-hat and j-hat - each land and everything else will follow from that.
 
+example: 
+
+$\vec v=-1\hat{\imath}+2\hat{\jmath}=-1\begin{bmatrix} 1\\0\end{bmatrix}+2\begin{bmatrix} 0\\1\end{bmatrix}=\begin{bmatrix} 1\\1\end{bmatrix}$
+
+after transformation:
+
+$\hat{\imath}\rightarrow \begin{bmatrix} 1\\-2\end{bmatrix}$
+
+$\hat{\jmath}\rightarrow \begin{bmatrix} 3\\0\end{bmatrix}$
+
+$\vec v=-1\hat{\imath}+2\hat{\jmath}\rightarrow-1\begin{bmatrix} 1\\-2\end{bmatrix}+2\begin{bmatrix} 3\\0\end{bmatrix}=\begin{bmatrix} 5\\2\end{bmatrix}$
+
 ## matrices
 
