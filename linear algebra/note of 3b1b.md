@@ -187,3 +187,24 @@ The linear transformations and multiplying two matrices in three dimensions is a
 
 # the determinant
 
+after shearing, the area of the parallelogram doesn't change.
+
+If we know how much the area of one single unit square changes, if can tell us how the area of any possible region in space changes. Any square in the grid has the same change, no matter the size.
+
+This very special scaling factor ,the factor by which a linear transformation changes any area, 
+
+is called **the determinant of that transformation** (not quite right because the full concept of the determinant allows for negative values)
+
+examples:
+
+1.  the determinant of a transformation would be 3, if that transformation increase the area of a region by a factor of 3.
+2. the determinant of a 2-D transformation is 0, if it squishes all of space on to a line or even onto a single point. Since then, the area of any region would become 0.
+
+So, checking if the determinant of a given matrix is 0 will give a way of computing whether or not the transformation associated with that matrix squishes everything into a smaller dimension.
+
+## how can we scale area by a negative number?
+
+This has to do with the idea of **orientation**.
+
+- Any transformations like giving the sensation of flipping space over are said to invert the orientation of space.
+- think about $\hat \imath$ and $\hat\jmath$: 

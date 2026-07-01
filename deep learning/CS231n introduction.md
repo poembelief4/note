@@ -26,7 +26,7 @@ A few smart undergrads hired to study vision. The goal was pretty much solve com
 
 He wanted to study vision systematically and start to consider how visual processing happens.
 
-It is difficult to rebuild 3D representation from 2D images.
+It is difficult to rebuild 3-D representation from 2-D images.
 
 ### 1980s
 
@@ -134,9 +134,9 @@ generative vision models blend understanding, creativity and control.
 
 they connect text and images in a shared representation space and give a caption or image.
 
-### 3D vision
+### 3-D vision
 
-reconstruct and generate 3D representations from images.
+reconstruct and generate 3-D representations from images.
 
 it is crucial for robotics and AI AR VR applications
 
