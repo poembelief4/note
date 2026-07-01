@@ -180,3 +180,10 @@ that means: $M_1 M_2\neq M_2M_1$
 But: $(M_1M_2)M_3=M_1(M_2M_3)$. Think about what this represents geometrically or look at this from right to left, then it's obviously.
 
 # linear transformations in three dimensions
+
+$\begin{bmatrix} 0\ 0\ 1\\0\ 1\ 0 \\-1\ 0\ 0\end{bmatrix}$ represents a linear transformation in three dimensions.
+
+The linear transformations and multiplying two matrices in three dimensions is also similar in two dimensions.
+
+# the determinant
+
