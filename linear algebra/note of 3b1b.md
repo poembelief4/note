@@ -204,7 +204,7 @@ So, checking if the determinant of a given matrix is 0 will give a way of comput
 
 ## how can we scale area by a negative number?
 
-This has to do with the idea of **orientation**.
+This has to do with the idea of **orientation**. When the orientation of space is inverted, the determinant will be nega
 
 - Any transformations like giving the sensation of flipping space over are said to invert the orientation of space.
-- think about $\hat \imath$ and $\hat\jmath$: 
+- think about $\hat \imath$ and $\hat\jmath$: In their starting positions, $\hat\jmath$ is to the left of $\hat\imath$. If after transformation, $\hat\jmath$ is now on the right of $\hat\imath$, the orientation of space has been inverted.
