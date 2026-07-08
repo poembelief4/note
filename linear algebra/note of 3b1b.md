@@ -193,7 +193,7 @@ If we know how much the area of one single unit square changes, if can tell us h
 
 This very special scaling factor ,the factor by which a linear transformation changes any area, 
 
-is called **the determinant of that transformation** (not quite right because the full concept of the determinant allows for negative values)
+is called **the determinant of that transformation** (not quite right because the full concept of the determinant allows for negative values. the **absolute value** of the determinant tells you the factor by which areas have been scaled.)
 
 examples:
 
@@ -204,7 +204,34 @@ So, checking if the determinant of a given matrix is 0 will give a way of comput
 
 ## how can we scale area by a negative number?
 
-This has to do with the idea of **orientation**. When the orientation of space is inverted, the determinant will be nega
+This has to do with the idea of **orientation**. When the orientation of space is inverted, the determinant will be negative. There two ways to understand this inversion:
 
 - Any transformations like giving the sensation of flipping space over are said to invert the orientation of space.
 - think about $\hat \imath$ and $\hat\jmath$: In their starting positions, $\hat\jmath$ is to the left of $\hat\imath$. If after transformation, $\hat\jmath$ is now on the right of $\hat\imath$, the orientation of space has been inverted.
+
+## right hand rule
+
+$\hat\imath$: the forefinger.
+
+$\hat\jmath$: the middle finger.
+
+$\hat k$: the thumb.
+
+the determinant in 3 dimensions become a negative number means you can match the corresponding rule only in left hand.
+
+## how to compute the determinant
+
+det $(\begin{bmatrix} a\ b\\ c\ d \end{bmatrix})=ad-bc$ 
+
+$a$ tells you how much $\hat\imath$ is stretched in the x-direction. 
+
+$d$ tells you how much $\hat\jmath$ is stretched in the y-direction.
+
+if neither of $b$ and $c$ is 0, then that $bc$ term tells you how much this parallelogram is stretched or squashed in the diagonal direction.
+
+det $(\begin{bmatrix} a\ b\ c\\ d\ e\ f\\g\ h\ i \end{bmatrix})=a$ det $(\begin{bmatrix} e\ f\\ h\ i \end{bmatrix})-b$ det $(\begin{bmatrix} d\ f\\ g\ i \end{bmatrix})+c$ det $(\begin{bmatrix} d\ e\\ g\ h \end{bmatrix})$
+
+det $(M_1M_2)=$ det $(M_1)$ det $(M_2)$
+
+# inverse matrices, column space and null space
+
