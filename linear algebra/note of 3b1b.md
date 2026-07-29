@@ -191,9 +191,7 @@ after shearing, the area of the parallelogram doesn't change.
 
 If we know how much the area of one single unit square changes, if can tell us how the area of any possible region in space changes. Any square in the grid has the same change, no matter the size.
 
-This very special scaling factor ,the factor by which a linear transformation changes any area, 
-
-is called **the determinant of that transformation** (not quite right because the full concept of the determinant allows for negative values. the **absolute value** of the determinant tells you the factor by which areas have been scaled.)
+This very special scaling factor, the factor by which a linear transformation changes any area, is called **the determinant of that transformation** (not quite right because the full concept of the determinant allows for negative values. the **absolute value** of the determinant tells you the factor by which areas have been scaled.)
 
 examples:
 
@@ -299,6 +297,8 @@ If the projection of $\vec w$ is pointing in the opposite direction from $\vec v
 
 when the two vectors are perpendicular, meaning the projection of one onto the other is the zero vector, their dot product is zero.
 
+the dot product is a very useful geometric tool for understanding projections and for testing whether or not two vectors tend to point in the same direction.
+
 ### why order doesn't matter
 
 if $\vec v$ and $\vec w$ happened to have the same length, we could leverage some symmetry.
@@ -309,4 +309,28 @@ example: $\vec v$ and $\vec w$ have the same length, and $\vec h=2\vec v$, so $\
 
 ## duality
 
-If output space of a linear transformation is the number line, no matter how it was defined, there is going to be some uniq
+If output space of a linear transformation is the number line, no matter how it was defined, there is going to be some unique vector $\vec v$ corresponding to that transformation, in the sense that applying the transformation is the same thing as taking a dot product with that vector.
+
+duality refers to situations where you have a natural-but-surprising correspondence between two types of mathematical thing.
+
+example: 
+
+- the dual of a vector is the linear transformation that it encode.
+- the dual of a linear transformation from some space to one dimension is a certain vector in that space.
+
+# cross products in the light of linear transformations
+
+## standard introduction
+
+the cross product of $\vec v$ and $\vec w$ ($\vec v \times \vec w$), is the area of the parallelogram consists of $\vec v$ and $\vec w$.
+
+for $\vec v\times\vec w$:
+
+- if $\vec v$ is on the right of $\vec w$, the cross product is positive. 
+- if $\vec v$ is on the left of $\vec w$, the cross product is negative.
+
+==This means that order matters: $\vec v\times\vec w=-\vec w\times\vec v$==
+
+if $\vec v=\begin{bmatrix} a\\ c\end{bmatrix}$and $\vec w=\begin{bmatrix} b\\ d \end{bmatrix}$, $\vec v\times\vec w=det(\begin{bmatrix} a\ b\\ c\ d \end{bmatrix})$
+
+## deeper understanding with linear transformations
