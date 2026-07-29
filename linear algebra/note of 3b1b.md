@@ -229,9 +229,42 @@ $d$ tells you how much $\hat\jmath$ is stretched in the y-direction.
 
 if neither of $b$ and $c$ is 0, then that $bc$ term tells you how much this parallelogram is stretched or squashed in the diagonal direction.
 
-det $(\begin{bmatrix} a\ b\ c\\ d\ e\ f\\g\ h\ i \end{bmatrix})=a$ det $(\begin{bmatrix} e\ f\\ h\ i \end{bmatrix})-b$ det $(\begin{bmatrix} d\ f\\ g\ i \end{bmatrix})+c$ det $(\begin{bmatrix} d\ e\\ g\ h \end{bmatrix})$
+$det (\begin{bmatrix} a\ b\ c\\ d\ e\ f\\g\ h\ i \end{bmatrix})=a ~det (\begin{bmatrix} e\ f\\ h\ i \end{bmatrix})-b ~det (\begin{bmatrix} d\ f\\ g\ i \end{bmatrix})+c~ det (\begin{bmatrix} d\ e\\ g\ h \end{bmatrix})$
 
-det $(M_1M_2)=$ det $(M_1)$ det $(M_2)$
+$det (M_1M_2)= det (M_1) det (M_2)$
 
 # inverse matrices, column space and null space
 
+one of the main reasons that linear algebra is more broadly applicable and required for just about any technical discipline is that it lets us solve certain systems of equations.
+
+it's nice to vertically line up the common variables, so you might need to throw in some zero coefficients whenever the variable doesn't show up in one of the equations. 
+
+**linear system equations** consist of many equations like $ax+by+cz=A,abc\neq0$.
+
+we can package all of the equations together into a single vector equation where we have the matrix containing all of the constant coefficients and a vector containing all of the variables, and their matrix-vector product equals some different constant vector.
+
+we often name that constant matrix $A$, denote the vector holding the variables with a $\vec x$, and call the constant vector on the right-hand side $\vec v$.
+
+## inverse matrices
+
+when $det(A)\neq 0$: there will always be one and only one vector that lands on $\vec v$, and you can find it by playing the transformation in reverse.
+
+In general, $A$ inverse is the unique transformation with the property that if you first apply $A$, then follow it with the transformation A inverse, you end up back where you started. Applying one transformation after another is captured algebraically with **matrix multiplication**.
+
+The core property of this transformation $A$ inverse is that $A$ inverse times $A$ equals the matrix that corresponds to "doing nothing". The transformation that "doing nothing" is called the "identity transformation".
+
+==if $det(A)\neq 0$, then $A^{-1}$ exists.==
+
+==if $det(A)= 0$, then $A^{-1}$ doesn't exist, but it's still possible that a solution exists.==
+
+## rank
+
+When the output of a transformation is a line, meaning it's one-dimensional, we say the transformation has **a rank of 1**.
+
+If all the vector land on some two-dimensional plane, we say the transformation has **a rank of 2**.
+
+**Rank** means the number of dimension in the output of a transformation.
+
+## column space
+
+This set of all possible outputs for a matrix, whether it's a line, a plane 
