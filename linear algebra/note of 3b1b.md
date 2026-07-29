@@ -331,6 +331,12 @@ for $\vec v\times\vec w$:
 
 ==This means that order matters: $\vec v\times\vec w=-\vec w\times\vec v$==
 
-if $\vec v=\begin{bmatrix} a\\ c\end{bmatrix}$and $\vec w=\begin{bmatrix} b\\ d \end{bmatrix}$, $\vec v\times\vec w=det(\begin{bmatrix} a\ b\\ c\ d \end{bmatrix})$
+if $\vec v=\begin{bmatrix} a\\ c\end{bmatrix}$and $\vec w=\begin{bmatrix} b\\ d \end{bmatrix}$, $\vec v\times\vec w=det(\begin{bmatrix} a\ b\\ c\ d \end{bmatrix})=ad-bc$
+
+in 3-D, $\vec v\times\vec w=\vec p$, and the length of the new vector $\vec p$ will be the area of that parallelogram. the direction of $\vec p$ is going to be perpendicular to the parallelogram.
+
+use the right hand rule to make the direction clear: point the forefinger of your right hand in the direction of $\vec v$, then stick out your middle finger in the direction of $\vec w$, then when you point up your thumb, that's **the direction of the cross product**.
+
+$\begin{bmatrix} v_1\\v_2\\v_3\end{bmatrix}\times\begin{bmatrix} w_1\\w_2\\w_3\end{bmatrix}=\begin{bmatrix} v_2\cdot w_3-w_2\cdot v_3\\v_3\cdot w_1-w_3\cdot v_1\\v_1\cdot w_2-w_1\cdot v_2\end{bmatrix}$
 
 ## deeper understanding with linear transformations
