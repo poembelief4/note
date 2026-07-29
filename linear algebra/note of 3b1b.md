@@ -221,7 +221,7 @@ the determinant in 3 dimensions become a negative number means you can match the
 
 ## how to compute the determinant
 
-det $(\begin{bmatrix} a\ b\\ c\ d \end{bmatrix})=ad-bc$ 
+$det (\begin{bmatrix} a\ b\\ c\ d \end{bmatrix})=ad-bc$ 
 
 $a$ tells you how much $\hat\imath$ is stretched in the x-direction. 
 
@@ -263,8 +263,50 @@ When the output of a transformation is a line, meaning it's one-dimensional, we 
 
 If all the vector land on some two-dimensional plane, we say the transformation has **a rank of 2**.
 
-**Rank** means the number of dimension in the output of a transformation.
+**Rank** means the number of dimension in the output of a transformation. It's the number of dimensions in the column space.
+
+When the rank is as high as it can be, meaning it equals the number of columns, we call the matrix **full rank**.
 
 ## column space
 
-This set of all possible outputs for a matrix, whether it's a line, a plane 
+This set of all possible outputs for a matrix, whether it's a line, a plane, 3-D space, whatever, is called the **column space** of the matrix.
+
+==The zero vector will always be included in the column space since linear transformation must keep the origin fixed in place.==
+
+## null space
+
+This set of vector that lands on the origin is called the **null space** or the **kernel** of the matrix.
+
+It's the space of all vectors that become null, in the sense that they land on the zero vector.
+
+In terms of the linear system of equations, when $\vec v$ happens to be the zero vector, the null space gives you all of the possible solutions to the equation.
+
+# non-square matrices
+
+like $\begin{bmatrix} a\ b\\ c\ d\\e~f \end{bmatrix}$. The column space of it has two dimensions, so it's still full rank.
+
+# dot products and duality
+
+## dot products
+
+If you have two vectors of the same dimension, taking their dot product means pairing up all of the coordinates, multiplying those pairs together and adding the results.
+
+example:$\begin{bmatrix} 1\\ 2 \end{bmatrix}\cdot \begin{bmatrix} 3\\ 4 \end{bmatrix}=1\cdot 3+2\cdot 4$
+
+To think about the dot product between two vectors $\vec v$ and $\vec w$, imagine projecting $\vec w$ onto the line that passes through the origin and the tip of $\vec v$ and multiplying the length of this projection by the length of $\vec v$, then you have the dot product $\vec v \cdot \vec w$.
+
+If the projection of $\vec w$ is pointing in the opposite direction from $\vec v$, their dot product will be negative.
+
+when the two vectors are perpendicular, meaning the projection of one onto the other is the zero vector, their dot product is zero.
+
+### why order doesn't matter
+
+if $\vec v$ and $\vec w$ happened to have the same length, we could leverage some symmetry.
+
+if they don't have the same length, the symmetry is broken, but it can be transformed into the situation that they have the same length.
+
+example: $\vec v$ and $\vec w$ have the same length, and $\vec h=2\vec v$, so $\vec h\cdot \vec w=2(\vec v\cdot \vec w)$
+
+## duality
+
+If output space of a linear transformation is the number line, no matter how it was defined, there is going to be some uniq
