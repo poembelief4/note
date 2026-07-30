@@ -348,3 +348,7 @@ This function is linear, so we can transform it:
 $\begin{bmatrix} p_1\\p_2\\p_3\end{bmatrix}\cdot \begin{bmatrix} x\\y\\z\end{bmatrix}=det\left(\begin{bmatrix} x~v_1~w_1\\y~v_2~w_2\\z~v_3~w_3\end{bmatrix}\right),\vec p=\begin{bmatrix} p_1\\p_2\\p_3\end{bmatrix}\Longrightarrow \begin{cases}p_1=v_2\cdot w_3-v_3\cdot w_2\\p_2=v_3\cdot w_1-v_1\cdot w_3\\p_3=v_1\cdot w_2-v_2\cdot w_1\end{cases}$
 
 $V=S\times h$, so to calculate the volume of a parallelepiped made by three vectors, we should know the space of two vectors and the height of the parallelepiped. so, it's a good choice to make $\vec p$ a vector that its length is the area of the parallelogram and it's perpendicular to the parallelogram.
+
+# change of basis
+
+anyway to translate between vectors and sets of numbers is called **a coordinate system** and the two special vector, $\hat\imath$ and $\hat\jmath$, are called the **basis vectors** of our standard coordinate system.
