@@ -340,3 +340,11 @@ use the right hand rule to make the direction clear: point the forefinger of you
 $\begin{bmatrix} v_1\\v_2\\v_3\end{bmatrix}\times\begin{bmatrix} w_1\\w_2\\w_3\end{bmatrix}=\begin{bmatrix} v_2\cdot w_3-w_2\cdot v_3\\v_3\cdot w_1-w_3\cdot v_1\\v_1\cdot w_2-w_1\cdot v_2\end{bmatrix}$
 
 ## deeper understanding with linear transformations
+
+$f\left(\begin{bmatrix} x\\y\\z\end{bmatrix}\right)=det\left(\begin{bmatrix} x~v_1~w_1\\y~v_2~w_2\\z~v_3~w_3\end{bmatrix}\right),\vec v=\begin{bmatrix} v_1\\v_2\\v_3\end{bmatrix},\vec w=\begin{bmatrix} w_1\\w_2\\w_3\end{bmatrix}$
+
+This function is linear, so we can transform it:
+
+$\begin{bmatrix} p_1\\p_2\\p_3\end{bmatrix}\cdot \begin{bmatrix} x\\y\\z\end{bmatrix}=det\left(\begin{bmatrix} x~v_1~w_1\\y~v_2~w_2\\z~v_3~w_3\end{bmatrix}\right),\vec p=\begin{bmatrix} p_1\\p_2\\p_3\end{bmatrix}\Longrightarrow \begin{cases}p_1=v_2\cdot w_3-v_3\cdot w_2\\p_2=v_3\cdot w_1-v_1\cdot w_3\\p_3=v_1\cdot w_2-v_2\cdot w_1\end{cases}$
+
+$V=S\times h$, so to calculate the volume of a parallelepiped made by three vectors, we should know the space of two vectors and the height of the parallelepiped. so, it's a good choice to make $\vec p$ a vector that its length is the area of the parallelogram and it's perpendicular to the parallelogram.
