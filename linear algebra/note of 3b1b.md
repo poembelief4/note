@@ -352,3 +352,8 @@ $V=S\times h$, so to calculate the volume of a parallelepiped made by three vect
 # change of basis
 
 anyway to translate between vectors and sets of numbers is called **a coordinate system** and the two special vector, $\hat\imath$ and $\hat\jmath$, are called the **basis vectors** of our standard coordinate system.
+
+an expression like $A^{-1}MA$ suggests a mathematical sort of empathy. $M$ represents a transformation of some kind as you see it, and the outer two matrices represent the empathy, the shift in perspective. the full matrix product represents that same transformation, but as someone else sees it.
+
+# Eigenvectors and eigenvalues
+
