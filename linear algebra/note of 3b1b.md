@@ -366,3 +366,20 @@ if we can find an eigenvector for the rotation, a vector that remains on its own
 often, **a better way** to get at the heart of what the linear transformation actually does, less dependent on your particular coordinate system, is to find the eigenvectors and eigenvalues.
 
 $A\vec v=\lambda\vec v$ : $A$ means the transformation matrix. $\vec v$ means the eigenvector. $\lambda$ is a number, namely the corresponding eigenvalue. The expression is saying that the matrix-vector product - A times $\vec v$ - gives the same result as just scaling the eigenvector $\vec v$ by some value $\lambda$.
+
+$A\vec v=(\lambda I)\vec v\Rightarrow (A-\lambda I)\vec v=\vec 0 $: $I$ is the identity matrix with 1's down the diagonal.
+
+we have a new matrix and we're looking for a vector $\vec v$, such that this new matrix times $\vec v$ gives the zero vector. we want a non-zero vector $\vec v$, so the determinant of the matrix is zero.
+
+==a 2-D transformation doesn't have to have eigenvectors.==
+
+==a single eigenvalue can have more that a line full of eigenvector.==
+
+## eigenbasis
+
+**diagonal matrix** means anytime the matrix has 0's everywhere other than diagonal. in it, all the basis vectors are eigenvectors, with the diagonal entries of this matrix being their eigenvalues.
+
+it is difficult to have a matrix that the basis vectors in it is just the eigenvectors. but if our transformation has a lot of eigenvectors and we can choose a set that spans the full space, then we could change our coordinate system so that these eigenvectors are our basis vectors. and the set of basis vectors is called **eigenbasis**.
+
+# abstract vector spaces
+
