@@ -357,3 +357,12 @@ an expression like $A^{-1}MA$ suggests a mathematical sort of empathy. $M$ repre
 
 # Eigenvectors and eigenvalues
 
+the special vectors with the special property of **staying on their span** are called the **eigenvectors** of the transformation, and each eigenvector has associated with a value, what's called an **eigenvalue**, which is just the factor by which it stretched or squashed during the transformation.
+
+eigenvalue can be negative. the important part is that the vector stays on the line that it spans out without getting rotated off of it.
+
+if we can find an eigenvector for the rotation, a vector that remains on its own span, what you have found is the axis of rotation. **But** the corresponding eigenvalue would have to be 1.
+
+often, **a better way** to get at the heart of what the linear transformation actually does, less dependent on your particular coordinate system, is to find the eigenvectors and eigenvalues.
+
+$A\vec v=\lambda\vec v$ : $A$ means the transformation matrix. $\vec v$ means the eigenvector. $\lambda$ is a number, namely the corresponding eigenvalue. The expression is saying that the matrix-vector product - A times $\vec v$ - gives the same result as just scaling the eigenvector $\vec v$ by some value $\lambda$.
