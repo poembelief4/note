@@ -383,6 +383,8 @@ it is difficult to have a matrix that the basis vectors in it is just the eigenv
 
 # abstract vector spaces
 
+a transformation is linear if it satisfies two following properties, commonly called "additivity" and "scaling".
+
 additivity: $L(\vec v+\vec w)=L(\vec v)+L(\vec w)$
 
 scaling: $L(c\vec v)=cL(\vec v)$
