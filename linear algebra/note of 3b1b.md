@@ -388,3 +388,85 @@ a transformation is linear if it satisfies two following properties, commonly ca
 additivity: $L(\vec v+\vec w)=L(\vec v)+L(\vec w)$
 
 scaling: $L(c\vec v)=cL(\vec v)$
+
+# Cramer's rule
+
+Cramer's rule is not actually the best way for computing solutions to linear systems of equations.
+$$
+\begin{cases}3x+2y=-4\\-1x+2y=-2\end{cases}\Longrightarrow\begin{bmatrix}~~~3~2\\-1~2\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}-4\\-2\end{bmatrix}
+$$
+if the determinant of the matrix **isn't zero**:
+
+the dot product usually change after the transformation.
+
+transformations which preserve dot products have their own name: **Orthonormal transformations**. after the transformation, all the basis vectors are still perpendicular to each other and still with unit lengths.
+
+as for orthonormal transformation, there is a super specific case, for example:
+$$
+\begin{bmatrix}
+	\cos(30^\circ)~-\sin(30^\circ)\\
+	\sin(30^\circ)~~~~~\cos(30^\circ)
+\end{bmatrix}
+\begin{bmatrix}
+	x\\
+	y
+\end{bmatrix}
+=
+\begin{bmatrix}
+	1\\
+	2
+\end{bmatrix}
+\Longrightarrow 
+\begin{cases}
+	x=
+	\begin{bmatrix}
+		1\\2
+	\end{bmatrix}
+	\cdot
+	\begin{bmatrix}
+		~~~\cos(30^\circ)\\
+		~~~\sin(30^\circ)
+	\end{bmatrix}\\
+	y=
+	\begin{bmatrix}
+		1\\
+		2
+	\end{bmatrix}
+	\cdot
+	\begin{bmatrix}
+	-\sin(30^\circ)\\
+	~~~\cos(30^\circ)
+	\end{bmatrix}
+\end{cases}
+$$
+for general transformation:
+$$
+\begin{bmatrix}
+	2~-1\\
+	0~~~~~~1
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+4\\
+2
+\end{bmatrix}
+Area=det(A)y\Longrightarrow y=\frac{Area}{det(A)}=
+\frac{
+	det\left(
+	\begin{bmatrix}
+		2~~~~~~4\\
+		0~~~~~~2
+	\end{bmatrix}\right)
+}{
+	det\left(
+	\begin{bmatrix}
+		2~-1\\
+		0~~~~~~1
+	\end{bmatrix}
+	\right)
+}
+$$
