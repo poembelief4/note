@@ -383,3 +383,6 @@ it is difficult to have a matrix that the basis vectors in it is just the eigenv
 
 # abstract vector spaces
 
+additivity: $L(\vec v+\vec w)=L(\vec v)+L(\vec w)$
+
+scaling: $L(c\vec v)=cL(\vec v)$
