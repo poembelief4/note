@@ -453,11 +453,10 @@ y
 \begin{bmatrix}
 4\\
 2
-\end{bmatrix}
+\end{bmatrix}
 $$
 
 $$
-
 Area=det(A)y\Longrightarrow y=\frac{Area}{det(A)}=
 \frac{
 	det\left(
