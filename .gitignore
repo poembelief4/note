@@ -1,0 +1,24 @@
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+credentials.json
+secrets.json
+
+# Caches and dependencies
+__pycache__/
+.cache/
+node_modules/
+
+# Temporary and operating-system files
+*.tmp
+*.temp
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini
