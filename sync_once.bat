@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableExtensions
+setlocal EnableExtensions EnableDelayedExpansion
 
 cd /d "%~dp0"
 if errorlevel 1 exit /b 10
@@ -7,8 +7,10 @@ if errorlevel 1 exit /b 10
 if not exist ".git" exit /b 11
 set "SYNC_LOG=%~dp0.git\auto-sync.log"
 
-call :sync >> "%SYNC_LOG%" 2>&1
-set "SYNC_EXIT=%ERRORLEVEL%"
+(
+    call :sync
+    set "SYNC_EXIT=!ERRORLEVEL!"
+) >> "%SYNC_LOG%" 2>&1
 exit /b %SYNC_EXIT%
 
 :sync
