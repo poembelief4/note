@@ -1,1 +1,3 @@
-agent学习/** -text
+agent学习/**/*.md -text
+agent学习/**/*.py -text
+agent学习/**/*.pdf -text
