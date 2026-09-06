@@ -1,5 +1,6 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
+chcp 65001 >nul
 
 cd /d "%~dp0"
 if errorlevel 1 exit /b 10
@@ -43,25 +44,32 @@ if exist ".git\MERGE_HEAD" (
     exit /b 14
 )
 
-git add -A
+set "MIRROR_DIRTY="
+for /f "delims=" %%S in ('git status --porcelain -- "agent学习" 2^>nul') do set "MIRROR_DIRTY=1"
+if defined MIRROR_DIRTY (
+    echo ERROR: The managed agent学习 mirror has local edits. Edit the source folder instead.
+    exit /b 16
+)
+
+git add -A -- . ":(exclude)agent学习/**"
 if errorlevel 1 (
-    echo ERROR: git add failed.
+    echo ERROR: Staging non-agent notes failed.
     exit /b 20
 )
 
 git diff --cached --quiet
-set "DIFF_EXIT=%ERRORLEVEL%"
-if "%DIFF_EXIT%"=="1" (
-    git commit -m "Auto-sync: %date% %time%"
+set "DIFF_EXIT=!ERRORLEVEL!"
+if "!DIFF_EXIT!"=="1" (
+    git commit -m "Auto-sync notes: %date% %time%"
     if errorlevel 1 (
-        echo ERROR: git commit failed.
+        echo ERROR: Committing non-agent notes failed.
         exit /b 21
     )
-) else if not "%DIFF_EXIT%"=="0" (
+) else if not "!DIFF_EXIT!"=="0" (
     echo ERROR: Could not inspect staged changes.
     exit /b 22
 ) else (
-    echo No new local changes to commit.
+    echo No new non-agent note changes to commit.
 )
 
 git fetch origin main
@@ -79,6 +87,33 @@ if errorlevel 1 (
         git rebase --abort
         exit /b 31
     )
+)
+
+"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "%~dp0sync_agent_files.ps1" -SourceRoot "%USERPROFILE%\Desktop\agent学习" -DestinationRoot "%~dp0agent学习"
+if errorlevel 1 (
+    echo ERROR: Agent study file validation or copy failed.
+    exit /b 33
+)
+
+git add -A -- "agent学习"
+if errorlevel 1 (
+    echo ERROR: Staging agent study files failed.
+    exit /b 34
+)
+
+git diff --cached --quiet
+set "AGENT_DIFF_EXIT=!ERRORLEVEL!"
+if "!AGENT_DIFF_EXIT!"=="1" (
+    git commit -m "Auto-sync agent学习: %date% %time% +08:00"
+    if errorlevel 1 (
+        echo ERROR: Committing agent study files failed.
+        exit /b 35
+    )
+) else if not "!AGENT_DIFF_EXIT!"=="0" (
+    echo ERROR: Could not inspect staged agent study changes.
+    exit /b 36
+) else (
+    echo Agent study mirror is already current.
 )
 
 set "AHEAD_COUNT="
