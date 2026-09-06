@@ -51,7 +51,7 @@ if defined MIRROR_DIRTY (
     exit /b 16
 )
 
-git add -A -- . ":(exclude)agent学习/**"
+git add -A
 if errorlevel 1 (
     echo ERROR: Staging non-agent notes failed.
     exit /b 20
