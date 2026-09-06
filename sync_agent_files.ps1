@@ -36,6 +36,27 @@ $secretPatterns = @(
 $eligibleExtensions = @('.md', '.py', '.pdf')
 $textExtensions = @('.md', '.py')
 
+function Get-Sha256 {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Path
+    )
+
+    $stream = [System.IO.File]::OpenRead($Path)
+    try {
+        $sha256 = [System.Security.Cryptography.SHA256]::Create()
+        try {
+            return ([System.BitConverter]::ToString($sha256.ComputeHash($stream))).Replace('-', '')
+        }
+        finally {
+            $sha256.Dispose()
+        }
+    }
+    finally {
+        $stream.Dispose()
+    }
+}
+
 $pendingDirectories = New-Object 'System.Collections.Generic.Stack[System.IO.DirectoryInfo]'
 $candidateFiles = New-Object 'System.Collections.Generic.List[System.IO.FileInfo]'
 $pendingDirectories.Push((Get-Item -LiteralPath $SourceRoot))
@@ -84,8 +105,8 @@ foreach ($file in $orderedFiles) {
     $copyRequired = -not (Test-Path -LiteralPath $destinationPath -PathType Leaf)
 
     if (-not $copyRequired) {
-        $sourceHash = (Get-FileHash -LiteralPath $file.FullName -Algorithm SHA256).Hash
-        $destinationHash = (Get-FileHash -LiteralPath $destinationPath -Algorithm SHA256).Hash
+        $sourceHash = Get-Sha256 -Path $file.FullName
+        $destinationHash = Get-Sha256 -Path $destinationPath
         $copyRequired = $sourceHash -ne $destinationHash
     }
 
