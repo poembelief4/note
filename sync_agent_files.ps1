@@ -33,6 +33,9 @@ $secretPatterns = @(
     '(?i)(?:api[_-]?key|client[_-]?secret|access[_-]?token|password)\s*[:=]\s*["''][^"''\r\n]{8,}["'']'
 )
 
+$eligibleExtensions = @('.md', '.py', '.pdf')
+$textExtensions = @('.md', '.py')
+
 $pendingDirectories = New-Object 'System.Collections.Generic.Stack[System.IO.DirectoryInfo]'
 $candidateFiles = New-Object 'System.Collections.Generic.List[System.IO.FileInfo]'
 $pendingDirectories.Push((Get-Item -LiteralPath $SourceRoot))
@@ -47,7 +50,7 @@ while ($pendingDirectories.Count -gt 0) {
     }
 
     foreach ($file in Get-ChildItem -LiteralPath $directory.FullName -File -Force) {
-        if ($file.Extension -ieq '.md' -or $file.Extension -ieq '.py') {
+        if ($eligibleExtensions -contains $file.Extension.ToLowerInvariant()) {
             $candidateFiles.Add($file)
         }
     }
@@ -57,6 +60,10 @@ $sourcePrefix = $SourceRoot.TrimEnd('\') + '\'
 $orderedFiles = @($candidateFiles | Sort-Object FullName)
 
 foreach ($file in $orderedFiles) {
+    if ($textExtensions -notcontains $file.Extension.ToLowerInvariant()) {
+        continue
+    }
+
     $relativePath = $file.FullName.Substring($sourcePrefix.Length)
     $lineNumber = 0
 
