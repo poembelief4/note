@@ -91,14 +91,6 @@ function Invoke-Sync {
         throw 'The managed agent study mirror has local edits. Edit the source folder instead.'
     }
 
-    Invoke-Git -Arguments @('add', '-A') | Out-Null
-    if (Test-StagedChanges) {
-        Invoke-Git -Arguments @('commit', '-m', "Auto-sync notes: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss zzz')") | Out-Null
-    }
-    else {
-        Write-Output 'No new non-agent note changes to commit.'
-    }
-
     Update-FromOrigin
 
     & $copyHelper -SourceRoot $sourceRoot -DestinationRoot $destinationRoot
