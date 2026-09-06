@@ -23,6 +23,13 @@ if errorlevel 1 (
     exit /b 12
 )
 
+set "ORIGIN_URL="
+for /f "delims=" %%R in ('git config --get remote.origin.url 2^>nul') do set "ORIGIN_URL=%%R"
+if /I not "!ORIGIN_URL!"=="https://github.com/poembelief4/note.git" (
+    echo ERROR: origin must use GitHub HTTPS, but is configured as !ORIGIN_URL!.
+    exit /b 15
+)
+
 if exist ".git\rebase-merge" (
     echo ERROR: A rebase is already in progress. Resolve it before syncing.
     exit /b 13
