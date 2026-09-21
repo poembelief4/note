@@ -95,7 +95,39 @@ $$
 
 零概率事件和必然事件与其他任意事件都独立。
 
-若 $P(A),P(B)>0$，则”事件 $A$ 与事件 “
+若 $P(A),P(B)>0$，则 ”事件 $A$ 与事件 $B$ 相互独立“ 和 ”事件 $A$ 与事件 $B$ 互斥“ 不能同时成立。
+
+若事件 $A$ 与 $B$ 独立，则 $A$ 与 $\overline B$ 独立，$\overline A$ 与 $B$ 独立，$\overline A$ 与 $\overline B$ 独立。
+
+### 三事件相互独立
+
+设 $A,B,C$ 为三个事件，若：
+$$
+\begin{cases}
+	P(AB)=P(A)P(B)\\
+	P(AC)=P(A)P(C)\\
+	P(BC)=P(B)P(C)
+\end{cases}
+$$
+则称 $A,B,C$ **两两独立**。若同时：
+$$
+P(ABC)=P(A)P(B)P(C)
+$$
+则称 $A,B,C$ **相互独立**。
+
+$A,B,C$ 相互独立 $\rightarrow$ $A,B,C$ 两两独立。但是==反过来推不出来==。
+
+实际应用中，往往根据**直观和外部经验**来判断多个事件的相互独立性。
+
+若 $A_1,A_2,\dots,A_n$ 相互独立，则：
+$$
+P\left(\bigcup_{i=1}^nA_i\right)=1-\prod_{i=1}^n(1-P(A_i))
+$$
+若 $P(A_i)=p$，则：
+$$
+P\left(\bigcup_{i=1}^nA_i\right)=1-(1-p)^n
+$$
+
 
 # D2L 概率
 
