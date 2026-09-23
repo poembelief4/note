@@ -22,3 +22,6 @@ node_modules/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Files exceeding GitHub's regular Git object limit
+/南科大/大学物理/Principle of physic -10th edition.pdf

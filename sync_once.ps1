@@ -98,12 +98,12 @@ function Invoke-Sync {
         throw 'Agent study file validation or copy failed.'
     }
 
-    Invoke-Git -Arguments @('add', '-A', '--', $managedFolderName) | Out-Null
+    Invoke-Git -Arguments @('add', '-A') | Out-Null
     if (Test-StagedChanges) {
-        Invoke-Git -Arguments @('commit', '-m', "Auto-sync agent study: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss zzz')") | Out-Null
+        Invoke-Git -Arguments @('commit', '-m', "Auto-sync notes: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss zzz')") | Out-Null
     }
     else {
-        Write-Output 'Agent study mirror is already current.'
+        Write-Output 'Repository working tree is already current.'
     }
 
     $aheadText = (& git -C $repositoryRoot rev-list --count origin/main..HEAD).Trim()
