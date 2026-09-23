@@ -6,6 +6,7 @@ $sourceRoot = Join-Path ([Environment]::GetFolderPath('Desktop')) $managedFolder
 $destinationRoot = Join-Path $repositoryRoot $managedFolderName
 $copyHelper = Join-Path $repositoryRoot 'sync_agent_files.ps1'
 $expectedOrigin = 'https://github.com/poembelief4/note.git'
+$maxRegularGitFileBytes = 100MB
 
 function Invoke-Git {
     param(
@@ -35,6 +36,26 @@ function Test-StagedChanges {
     }
 
     throw "Could not inspect staged changes; git diff exited with $exitCode."
+}
+
+function Remove-OversizedFilesFromIndex {
+    $stagedPaths = @(& git -C $repositoryRoot -c core.quotePath=false diff --cached --name-only --diff-filter=ACM)
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Could not inspect staged file sizes.'
+    }
+
+    foreach ($relativePath in $stagedPaths) {
+        if ([string]::IsNullOrWhiteSpace($relativePath)) {
+            continue
+        }
+
+        $absolutePath = Join-Path $repositoryRoot $relativePath
+        if ((Test-Path -LiteralPath $absolutePath -PathType Leaf) -and
+            (Get-Item -LiteralPath $absolutePath).Length -gt $maxRegularGitFileBytes) {
+            Write-Warning "Skipping file larger than 100 MiB: $relativePath"
+            Invoke-Git -Arguments @('restore', '--staged', '--', $relativePath) | Out-Null
+        }
+    }
 }
 
 function Update-FromOrigin {
@@ -99,6 +120,7 @@ function Invoke-Sync {
     }
 
     Invoke-Git -Arguments @('add', '-A') | Out-Null
+    Remove-OversizedFilesFromIndex
     if (Test-StagedChanges) {
         Invoke-Git -Arguments @('commit', '-m', "Auto-sync notes: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss zzz')") | Out-Null
     }
