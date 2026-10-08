@@ -100,14 +100,7 @@ def gc(x,obj,model_grad,exact_grad,x_star,gamma,L_r,alpha,beta,eta_min,eta_max,l
 
         if np.linalg.norm(x-x_star)<lim:
             break
-    return (
-        x,
-        evaluation,
-        model_step,
-        outer_step,
-        np.asarray(evaluation_history),
-        np.asarray(error_history),
-    )
+    return (x,evaluation,model_step,outer_step,np.asarray(evaluation_history),np.asarray(error_history))
 
 def model_free_descent(x,obj,exact_grad,x_star,alpha,beta,eta_max,lim=1e-3,max_step=10000):
     x=x.copy()
@@ -136,13 +129,7 @@ def model_free_descent(x,obj,exact_grad,x_star,alpha,beta,eta_max,lim=1e-3,max_s
         evaluation_history.append(evaluation)
         error_history.append(np.linalg.norm(x-x_star))
 
-    return (
-        x,
-        evaluation,
-        step,
-        np.asarray(evaluation_history),
-        np.asarray(error_history),
-    )
+    return (x,evaluation,step,np.asarray(evaluation_history),np.asarray(error_history))
 
 if __name__ == "__main__":
     from quadratic_problem import (
