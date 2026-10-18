@@ -1,10 +1,10 @@
 Hello everyone! Today, I want to show you the differences between northern and southern dialects and a special case.
 
-In China, there are many dialects, such as (play audio). They all mean "Do you have a meal?". And first of all, I want you to guess whether a dialect spoken in southwestern China, like this one, is classified as part of the northern or southern dialect group.
+In China, there are many dialects, such as these( play audio). They all mean "Have you eaten?" And first of all, I want you to guess whether a dialect spoken in southwestern China, like this one, is classified as part of the northern or southern dialect group.
 
-Actually, it belongs to the northern dialect group. Surprised, right? Well, I was also surprised when I first learned this. But I understood immediately why it belongs to the northern dialect group. To tell you why, I will show you how we distinguish between northern and southern dialects and discuss why they're different. Then I will explain why the southwestern dialect belongs to the northern dialect group.
+Actually, it belongs to the northern dialect group. Surprised, right? Well, I was also surprised when I first learned this. But I immediately noticed that the biggest difference between the northern and southern dialects is how easily we can understand them. To explain this more clearly, I will show you how we distinguish between northern and southern dialects and discuss why they're different. Then I will explain why the southwestern dialect belongs to the northern dialect group.
 
-From what I showed just now, we can notice an obvious difference: We can understand the northern one easily in most situations even when we hear it for the first time. But we can't understand the southern one if we don't know anything about it. So, if we want to guess whether a dialect is northern or southern, we can consider whether we can understand the speaker easily. If we can, it may be a northern dialect. If not, it may be a southern dialect.
+From what I showed just now, we can notice an obvious fact: We can understand the northern one easily in most situations even when we hear it for the first time. But we can't understand the southern one if we don't know anything about it. So, if we want to guess whether a dialect is northern or southern, we can consider whether we can understand the speaker easily. If we can, it may be a northern dialect. If not, it may be a southern dialect.
 
 Then you may be curious about why there is such a difference. In my opinion, the most important factor is the difference in geography. 
 
@@ -16,4 +16,4 @@ Then, let's think about the southwestern dialect. I'm from Guizhou, a southweste
 
 Then there comes a question: Why is a dialect spoken in southern China actually classified as a northern dialect? In my view, one major reason is migration. During the Ming and Qing periods, many migrants moved from northern China to southwestern China. They brought new farming techniques and tools which helped them adapt to the local environment and develop agriculture quickly. As their communities grew, they became increasingly influential in local government, trade and daily life. Then, local people and migrants gradually began to use a shared language, which later developed into the southwestern dialect.
 
-It's interesting, isn't it? The way we speak in daily life reflects the history and features of our country. The next time you speak your own dialect, you may realize that it shows where you are from. It represents your roots and connects you with your ancestors.
+It's interesting, isn't it? We can guess where a person comes from by the dialect he or she speaks. The way we speak in daily life reflects the history and features of our country. The next time you speak your own dialect, you may realize that it shows where you are from. It represents your roots and connects you with your ancestors.
